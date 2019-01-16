@@ -1,2 +1,10 @@
-/Temp
-/Logs
+# Unity Default Folders
+Temp/
+Logs/
+Library/
+
+# Unity Themes
+Zios\.CompleteFramework\.csproj
+Zios\.CompleteFramework\.Editor\.csproj
+Assets/@unity-themes-master\.meta
+Assets/@unity-themes-master/

@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{CFFF49DE-F152-8D15-3983-3BB51F694081}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zios.CompleteFramework", "Zios.CompleteFramework.csproj", "{30157DD2-F0EB-1723-9A54-1A2E4D240675}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zios.CompleteFramework.Editor", "Zios.CompleteFramework.Editor.csproj", "{92A12730-EF0D-C2CB-58FB-8D55DBA4F5D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{CFFF49DE-F152-8D15-3983-3BB51F694081}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFFF49DE-F152-8D15-3983-3BB51F694081}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFFF49DE-F152-8D15-3983-3BB51F694081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30157DD2-F0EB-1723-9A54-1A2E4D240675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30157DD2-F0EB-1723-9A54-1A2E4D240675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30157DD2-F0EB-1723-9A54-1A2E4D240675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30157DD2-F0EB-1723-9A54-1A2E4D240675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A12730-EF0D-C2CB-58FB-8D55DBA4F5D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A12730-EF0D-C2CB-58FB-8D55DBA4F5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A12730-EF0D-C2CB-58FB-8D55DBA4F5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A12730-EF0D-C2CB-58FB-8D55DBA4F5D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
