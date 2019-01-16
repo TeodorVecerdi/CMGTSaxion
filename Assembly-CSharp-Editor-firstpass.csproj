@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CFFF49DE-F152-8D15-3983-3BB51F694081}</ProjectGuid>
+    <ProjectGuid>{3A389E37-DC8A-EEAE-FC75-2332CB4CE23B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor-firstpass</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -53,73 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Utils\HexUtils.cs" />
-    <Compile Include="Assets\Scripts\Utils\Logger.cs" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\GenericMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\SteppedShading[Blend].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-Basic.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-DiffuseMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\SelfShadow.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Fallback-Alpha.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\DiffuseShading[Lerp].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\NormalIndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Clipping.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\Lighting.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\ShadingAtlas.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Padding.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Billboard.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\Hue.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-IndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\LightMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Megashader\Megashader#.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\BumpMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\TriplanarMap.shader" />
-    <None Include="Assets\@unity-themes-master\License.txt" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\SceneAmbientManual.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Shared.cginc" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\Fresnel.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\ReplaceColor[8].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\SimpleAlpha.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Megashader\MegashaderUI.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Fallback-Default.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\OverlayColor.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Fallback-Cutout.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasDiffuseMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\DiffuseColor.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\Alpha.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\FixedRim.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\SimpleLighting.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\DiffuseShading[Blend].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasPaddedDiffuseMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasGenericMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\Grayscale.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\DiffuseShading.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Atlas.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\AmbientColor.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AlphaMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Megashader\PhotoshopBlend.cginc" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasPaddedGenericMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\IndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\GradientShading[8].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasPaddedIndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\VertexOutlines.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\Desaturate.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\LODShadingMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\UVScroll.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasIndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\Specular.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\LerpColor.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\ShadowLightMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\OutlineMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\CustomLighting.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\SplatMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\SceneAmbient.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-GenericMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Empty.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\DiffuseShading[Add].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-NormalIndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\VertexColor.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\DiffuseMap.shader" />
+    <Compile Include="Assets\Plugins\Editor\JetBrains\Unity3DRider.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>J:/Development/GitHub/Unity/CMGTSaxion/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -222,6 +156,9 @@
     <Reference Include="UnityEngine.SharedInternalsModule">
       <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.SpatialTrackingModule">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
       <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
     </Reference>
@@ -318,6 +255,12 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
@@ -327,14 +270,44 @@
     <Reference Include="UnityEngine.Timeline">
       <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Timeline">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GoogleAudioSpatializer">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>J:/Development/GitHub/Unity/CMGTSaxion/Library/PackageCache/com.unity.ads@2.3.1/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>J:/Development/GitHub/Unity/CMGTSaxion/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
@@ -350,6 +323,9 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>J:/Development/GitHub/Unity/CMGTSaxion/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>J:/Development/GitHub/Unity/CMGTSaxion/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -718,6 +694,10 @@
     <ProjectReference Include="Grid.csproj">
       <Project>{78FB09C8-9B05-1040-FB68-999888155904}</Project>
       <Name>Grid</Name>
+    </ProjectReference>
+    <ProjectReference Include="Utils.csproj">
+      <Project>{7790CDD3-7123-7562-05BF-5554D78F7ADA}</Project>
+      <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
