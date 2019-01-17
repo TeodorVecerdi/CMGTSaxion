@@ -3,7 +3,7 @@
 public static class HexUtils {
     public const float INNER_CONSTANT = 0.8660254037f;
 
-    public static Vector3[] HexVertices = {
+    public static readonly Vector3[] Vertices = {
         new Vector3(0f, 1f, 0f),
         new Vector3(INNER_CONSTANT, 0.5f, 0f),
         new Vector3(INNER_CONSTANT, -0.5f, 0f),

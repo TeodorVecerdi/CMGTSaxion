@@ -7,23 +7,27 @@ public class GridController : MonoBehaviour {
     public float CellRadius = 10f;
 
     private HexGrid grid;
-    private HexRenderer hexGridRenderer;
+    private HexRenderer hexRenderer;
+    private WallRenderer wallRenderer;
 
     private void Awake() {
-        hexGridRenderer = GetComponentInChildren<HexRenderer>();
+        hexRenderer = GetComponentInChildren<HexRenderer>();
+        wallRenderer = GetComponentInChildren<WallRenderer>();
         grid = new HexGrid(Width, Height, CellRadius);
     }
 
     private void Start() {
-        hexGridRenderer.BuildGrid(grid);
+        hexRenderer.BuildCellMesh(grid);
+        wallRenderer.BuildWallMesh(grid);
     }
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.A)) {
-            int index = Random.Range(0, grid.Length);
-            grid[index] = null;
-            Log($"Removed Cell at {index/Width},{index%Width}");
-            hexGridRenderer.BuildGrid(grid);
+            int x = Random.Range(0, grid.Width);
+            int y = Random.Range(0, grid.Height);
+            grid[x,y] = null;
+            Log($"Removed Cell at {x},{y}");
+            hexRenderer.BuildCellMesh(grid);
         }
     }
 }

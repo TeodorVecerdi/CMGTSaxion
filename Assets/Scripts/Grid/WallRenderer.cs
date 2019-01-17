@@ -2,26 +2,27 @@
 using UnityEngine;
 using static Logger;
 
-public class HexRenderer : MonoBehaviour {
+public class WallRenderer : MonoBehaviour {
+    public float WallThickness = 1f;
     private Mesh mesh;
     private List<Vector3> vertices;
     private List<int> triangles;
 
     private void Awake() {
         GetComponent<MeshFilter>().mesh = mesh = new Mesh();
-        mesh.name = "Cell Mesh";
+        mesh.name = "Wall Mesh";
         vertices = new List<Vector3>();
         triangles = new List<int>();
     }
 
-    public void BuildCellMesh(HexGrid grid) {
+    public void BuildWallMesh(HexGrid grid) {
         mesh.Clear();
         vertices.Clear();
         triangles.Clear();
         for (int x = 0; x < grid.Width; x++) {
             for (int y = 0; y < grid.Height; y++) {
                 if(grid[x, y] != null)
-                    AddHex(grid[x, y]);
+                    AddHexWalls(grid[x, y]);
             }
         }
         mesh.vertices = vertices.ToArray();
@@ -29,11 +30,23 @@ public class HexRenderer : MonoBehaviour {
         mesh.RecalculateNormals();
     }
 
-    private void AddHex(HexCell hexCell) {
+    private void AddHexWalls(HexCell hexCell) {
         Vector3 center = new Vector3(hexCell.WorldX + hexCell.Radius * HexUtils.INNER_CONSTANT, hexCell.WorldY + hexCell.Radius, 0f);
         for (int i = 0; i < 6; i++) {
-            AddTriangle(center, center + HexUtils.Vertices[i % 6] * hexCell.Radius, center + HexUtils.Vertices[(i + 1) % 6] * hexCell.Radius);
+            if(hexCell.Walls[i])
+                AddWall(center, i, hexCell.Radius);
         }
+    }
+
+    private void AddWall(Vector3 center, int index, float radius) {
+        Vector3 A = HexUtils.Vertices[index % 6] * radius;
+        Vector3 B = HexUtils.Vertices[(index + 1) % 6] * radius;
+        Vector3 perpendicular = new Vector3(-A.y + B.y, A.x - B.x, 0f).normalized * WallThickness;
+        Vector3 C = perpendicular + A;
+        Vector3 D = perpendicular + B;
+        
+        AddTriangle(center + C, center + A, center + B);
+        AddTriangle(center + C, center + B, center + D);
     }
 
     private void AddTriangle(Vector3 a, Vector3 b, Vector3 c) {

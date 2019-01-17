@@ -683,14 +683,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Zios.CompleteFramework.Editor.csproj">
-      <Project>{92A12730-EF0D-C2CB-58FB-8D55DBA4F5D3}</Project>
-      <Name>Zios.CompleteFramework.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zios.CompleteFramework.csproj">
-      <Project>{30157DD2-F0EB-1723-9A54-1A2E4D240675}</Project>
-      <Name>Zios.CompleteFramework</Name>
-    </ProjectReference>
     <ProjectReference Include="Grid.csproj">
       <Project>{78FB09C8-9B05-1040-FB68-999888155904}</Project>
       <Name>Grid</Name>

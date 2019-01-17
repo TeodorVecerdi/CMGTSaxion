@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\Grid\HexCell.cs" />
     <Compile Include="Assets\Scripts\Grid\HexGrid.cs" />
     <Compile Include="Assets\Scripts\Grid\HexRenderer.cs" />
+    <Compile Include="Assets\Scripts\Grid\WallRenderer.cs" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
