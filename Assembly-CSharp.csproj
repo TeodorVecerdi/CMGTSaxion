@@ -53,73 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Utils\HexUtils.cs" />
-    <Compile Include="Assets\Scripts\Utils\Logger.cs" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\GenericMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\SteppedShading[Blend].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-Basic.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-DiffuseMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\SelfShadow.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Fallback-Alpha.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\DiffuseShading[Lerp].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\NormalIndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Clipping.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\Lighting.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\ShadingAtlas.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Padding.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Billboard.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\Hue.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-IndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\LightMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Megashader\Megashader#.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\BumpMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\TriplanarMap.shader" />
-    <None Include="Assets\@unity-themes-master\License.txt" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\SceneAmbientManual.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Shared.cginc" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\Fresnel.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\ReplaceColor[8].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\SimpleAlpha.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Megashader\MegashaderUI.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Fallback-Default.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\OverlayColor.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Fallback-Cutout.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasDiffuseMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\DiffuseColor.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\Alpha.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\FixedRim.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\SimpleLighting.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\DiffuseShading[Blend].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasPaddedDiffuseMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasGenericMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\Grayscale.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\DiffuseShading.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\Atlas.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\AmbientColor.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AlphaMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Megashader\PhotoshopBlend.cginc" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasPaddedGenericMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\IndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\GradientShading[8].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasPaddedIndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\VertexOutlines.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\Desaturate.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\LODShadingMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Utility\UVScroll.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-AtlasIndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\Specular.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\LerpColor.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\ShadowLightMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\OutlineMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\CustomLighting.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\SplatMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\SceneAmbient.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-GenericMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Empty.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Lighting\DiffuseShading[Add].shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Shadows\ShadowPass-NormalIndexMap.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Color\VertexColor.shader" />
-    <None Include="Assets\@unity-themes-master\Shaders\Mappings\DiffuseMap.shader" />
+    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>J:/Development/GitHub/Unity/CMGTSaxion/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -707,17 +641,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Zios.CompleteFramework.Editor.csproj">
-      <Project>{92A12730-EF0D-C2CB-58FB-8D55DBA4F5D3}</Project>
-      <Name>Zios.CompleteFramework.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zios.CompleteFramework.csproj">
-      <Project>{30157DD2-F0EB-1723-9A54-1A2E4D240675}</Project>
-      <Name>Zios.CompleteFramework</Name>
-    </ProjectReference>
     <ProjectReference Include="Grid.csproj">
       <Project>{78FB09C8-9B05-1040-FB68-999888155904}</Project>
       <Name>Grid</Name>
+    </ProjectReference>
+    <ProjectReference Include="Utils.csproj">
+      <Project>{7790CDD3-7123-7562-05BF-5554D78F7ADA}</Project>
+      <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
