@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using static Logger;
 
 public class GridController : MonoBehaviour {
@@ -25,7 +26,7 @@ public class GridController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.A)) {
             int x = Random.Range(0, grid.Width);
             int y = Random.Range(0, grid.Height);
-            grid[x,y] = null;
+            grid[x, y] = null;
             Log($"Removed Cell at {x},{y}");
             hexRenderer.BuildCellMesh(grid);
         }

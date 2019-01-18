@@ -1,5 +1,5 @@
 ﻿using static Logger;
-
+ 
 public class HexCell {
     public float WorldX;
     public float WorldY;
@@ -18,7 +18,6 @@ public class HexCell {
     }
 
     public void RemoveWall(ref HexCell other, int wallIndex) {
-        Log(wallIndex);
         Walls[wallIndex] = false;
         other.Walls[(wallIndex + 3) % 6] = false;
     }
