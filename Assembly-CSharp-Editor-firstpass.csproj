@@ -691,6 +691,10 @@
       <Project>{7790CDD3-7123-7562-05BF-5554D78F7ADA}</Project>
       <Name>Utils</Name>
     </ProjectReference>
+    <ProjectReference Include="Misc.csproj">
+      <Project>{71627304-2964-8B80-42F7-C83E23F1056E}</Project>
+      <Name>Misc</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

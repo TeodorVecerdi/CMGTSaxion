@@ -1,10 +1,12 @@
-﻿Microsoft Visual Studio Solution File, Format Version 11.00
+Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils.csproj", "{7790CDD3-7123-7562-05BF-5554D78F7ADA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grid", "Grid.csproj", "{78FB09C8-9B05-1040-FB68-999888155904}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Player", "Player.csproj", "{E379BB1A-20BA-1032-2196-17ACCECE6206}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Misc", "Misc.csproj", "{71627304-2964-8B80-42F7-C83E23F1056E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{3A389E37-DC8A-EEAE-FC75-2332CB4CE23B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,10 +22,14 @@ Global
 		{78FB09C8-9B05-1040-FB68-999888155904}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78FB09C8-9B05-1040-FB68-999888155904}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78FB09C8-9B05-1040-FB68-999888155904}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E379BB1A-20BA-1032-2196-17ACCECE6206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E379BB1A-20BA-1032-2196-17ACCECE6206}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E379BB1A-20BA-1032-2196-17ACCECE6206}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E379BB1A-20BA-1032-2196-17ACCECE6206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71627304-2964-8B80-42F7-C83E23F1056E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71627304-2964-8B80-42F7-C83E23F1056E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71627304-2964-8B80-42F7-C83E23F1056E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71627304-2964-8B80-42F7-C83E23F1056E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A389E37-DC8A-EEAE-FC75-2332CB4CE23B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A389E37-DC8A-EEAE-FC75-2332CB4CE23B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A389E37-DC8A-EEAE-FC75-2332CB4CE23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A389E37-DC8A-EEAE-FC75-2332CB4CE23B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

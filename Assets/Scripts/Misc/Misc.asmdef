@@ -1,7 +1,8 @@
 {
-    "name": "Player",
+    "name": "Misc",
     "references": [
-        "Utils"
+        "Utils",
+        "Grid"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
