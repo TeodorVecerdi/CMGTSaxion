@@ -1,4 +1,5 @@
-﻿using static Logger;
+﻿using UnityEngine;
+using static Logger;
  
 public class HexCell {
     public float WorldX;
@@ -7,6 +8,8 @@ public class HexCell {
     public float ArrayY;
     public float Radius;
     public bool[] Walls;
+    public bool Visible = false;
+    public bool isFinish = false;
 
     public HexCell(float x, float y, float radius) {
         Radius = radius;
@@ -20,6 +23,12 @@ public class HexCell {
     public void RemoveWall(ref HexCell other, int wallIndex) {
         Walls[wallIndex] = false;
         other.Walls[(wallIndex + 3) % 6] = false;
+    }
+
+    public static Vector2 GetTexture(HexCell cell) {
+        if (!cell.Visible) return Constants.HIDDEN_CELL_TEXTURE;
+        if (cell.isFinish) return Constants.FINISH_CELL_TEXTURE;
+        return Constants.DEFAULT_CELL_TEXTURE;
     }
 }
 

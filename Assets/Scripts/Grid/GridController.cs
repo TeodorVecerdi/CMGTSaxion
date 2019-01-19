@@ -18,6 +18,10 @@ public class GridController : MonoBehaviour {
     }
 
     private void Start() {
+        UpdateMeshes();
+    }
+
+    public void UpdateMeshes() {
         hexRenderer.BuildCellMesh(Grid);
         wallRenderer.BuildWallMesh(Grid);
     }

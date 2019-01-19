@@ -687,13 +687,13 @@
       <Project>{78FB09C8-9B05-1040-FB68-999888155904}</Project>
       <Name>Grid</Name>
     </ProjectReference>
-    <ProjectReference Include="Utils.csproj">
-      <Project>{7790CDD3-7123-7562-05BF-5554D78F7ADA}</Project>
-      <Name>Utils</Name>
-    </ProjectReference>
     <ProjectReference Include="Misc.csproj">
       <Project>{71627304-2964-8B80-42F7-C83E23F1056E}</Project>
       <Name>Misc</Name>
+    </ProjectReference>
+    <ProjectReference Include="Utils.csproj">
+      <Project>{7790CDD3-7123-7562-05BF-5554D78F7ADA}</Project>
+      <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

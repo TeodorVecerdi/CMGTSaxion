@@ -95,7 +95,6 @@ public class HexGrid {
     }
     
     public List<CellIndex> GetPassableNeighbours(int x, int y) {
-        Log($"x: {x}, y: {y}");
         List<CellIndex> neighbours = GetCellNeighbours(ValueTuple.Create(x, y, 0));
         List<CellIndex> passable = new List<CellIndex>();
         for (int i = 0; i < 6; i++) {

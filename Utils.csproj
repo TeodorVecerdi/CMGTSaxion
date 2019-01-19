@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Utils\Constants.cs" />
     <Compile Include="Assets\Scripts\Utils\HexUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\Logger.cs" />
     <None Include="Assets\Scripts\Utils\Utils.asmdef" />

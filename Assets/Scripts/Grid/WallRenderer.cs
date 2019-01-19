@@ -21,7 +21,7 @@ public class WallRenderer : MonoBehaviour {
         triangles.Clear();
         for (int x = 0; x < grid.Width; x++) {
             for (int y = 0; y < grid.Height; y++) {
-                if(grid[x, y] != null)
+                if(grid[x, y] != null && grid[x, y].Visible)
                     AddHexWalls(grid[x, y]);
             }
         }
