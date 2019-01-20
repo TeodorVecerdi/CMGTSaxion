@@ -2,34 +2,40 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimeRemaining : MonoBehaviour {
+public class Timer : MonoBehaviour {
     public Slider Slider;
     public Image FillImage;
     public Image BackgroundImage;
     public TextMeshProUGUI TimeRemainingText;
 
-    public float TimeLeft = 60f;
+    public float TimeRemaining = 60f;
     public float StartingTimeLeft = 60f;
-    public float OnCompletionBonus = 60f;
-
+    public float NextLevelBonus = 45f;
+    public bool TimeOut;
+    
     private bool shouldRun;
 
     private void Start() {
-        TimeLeft = StartingTimeLeft;
+        TimeRemaining = StartingTimeLeft;
         UpdateUI();
     }
 
     private void Update() {
         if (shouldRun) {
-            TimeLeft -= Time.deltaTime;
+            TimeRemaining -= Time.deltaTime;
             UpdateUI();
+            if (TimeRemaining <= 0) {
+                TimeOut = true;
+                TimeRemaining = 0;
+                StopTimer();
+            }
         }
     }
 
     private void UpdateUI() {
-        TimeRemainingText.text = TimeLeft.ToString("n2") + " seconds left";
+        TimeRemainingText.text = TimeRemaining.ToString("n2") + " seconds left";
 
-        float precentageLeft = TimeLeft / StartingTimeLeft;
+        float precentageLeft = TimeRemaining / StartingTimeLeft;
 
         Color sliderColor = Color.green;
         if (precentageLeft < 0.5f) sliderColor = Color.yellow;
@@ -38,6 +44,11 @@ public class TimeRemaining : MonoBehaviour {
         sliderColor.a = FillImage.color.a;
         FillImage.color = sliderColor;
         Slider.value = Mathf.Clamp01(precentageLeft);
+    }
+
+    public void NewLevel() {
+        StartTimer();
+        TimeRemaining = 60f;
     }
     
     public void StartTimer() {

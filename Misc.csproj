@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Misc\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Misc\TargetFollow.cs" />
-    <Compile Include="Assets\Scripts\Misc\TimeRemaining.cs" />
+    <Compile Include="Assets\Scripts\Misc\Timer.cs" />
     <None Include="Assets\Scripts\Misc\Misc.asmdef" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>J:/Development/GitHub/Unity/CMGTSaxion/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

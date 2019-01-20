@@ -130,7 +130,7 @@ public class HexGrid {
             }
         }
     }
-
+    
     public void SetFinishCell(int x, int y) {
         Cells[x, y].isFinish = true;
         Cells[x, y].Visible = true;
