@@ -55,7 +55,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Misc\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Misc\TargetFollow.cs" />
+    <Compile Include="Assets\Scripts\Misc\TimeRemaining.cs" />
     <None Include="Assets\Scripts\Misc\Misc.asmdef" />
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>J:/Development/GitHub/Unity/CMGTSaxion/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>J:/Development/GitHub/Unity/CMGTSaxion/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>B:/Unity Profiles/2018.3.0f2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>

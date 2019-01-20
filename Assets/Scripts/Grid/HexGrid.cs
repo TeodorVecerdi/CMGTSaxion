@@ -9,6 +9,9 @@ public class HexGrid {
     public float CellRadius;
     public HexCell[,] Cells;
     public int Length => Cells.Length;
+    
+    public int finishCellX;
+    public int finishCellY;
 
     public HexGrid(int width, int height, float cellRadius) {
         Width = width;
@@ -109,6 +112,30 @@ public class HexGrid {
         }
 
         return passable;
+    }
+    
+    public void MakeNeighboursVisible(int x, int y, List<CellIndex> neighbours = null) {
+        //Get neighbours if not received through parameter
+        if (neighbours == null)
+            neighbours = GetPassableNeighbours(x, y);
+
+        foreach (var neighbour in neighbours)
+            Cells[neighbour.Item1, neighbour.Item2].Visible = true;
+    }
+
+    public void ShowAllCells() {
+        for (int i = 0; i < Width; i++) {
+            for (int j = 0; j < Height; j++) {
+                Cells[i, j].Visible = true;
+            }
+        }
+    }
+
+    public void SetFinishCell(int x, int y) {
+        Cells[x, y].isFinish = true;
+        Cells[x, y].Visible = true;
+        finishCellX = x;
+        finishCellY = y;
     }
 
     public HexCell this[int x, int y] {

@@ -2,7 +2,9 @@
     "name": "Misc",
     "references": [
         "Utils",
-        "Grid"
+        "Grid",
+        "Unity.TextMeshPro.Editor",
+        "Unity.TextMeshPro"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
