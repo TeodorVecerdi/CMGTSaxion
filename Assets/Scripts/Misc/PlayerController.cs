@@ -1,27 +1,40 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
 using CellIndex = System.ValueTuple<int, int, int>;
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour {
-    public SpriteRenderer[] ArrowRenderers;
+    [Header("Script References")]
     public GridController GridController;
     public TargetFollow CameraFollow;
     public Timer Timer;
+    [Space]
+    [Header("Graphic References")]
+    public SpriteRenderer[] ArrowRenderers;
     public RectTransform ContinuePlayingMenu;
     public RectTransform GameOverMenu;
     public TextMeshProUGUI[] ScoreText;
     public TextMeshProUGUI[] HighscoreText;
+    public TextMeshProUGUI BonusScoreText;
+    public Sprite[] PlayerSprites; // 0 - front, 1 - back, 2 - left, 3 - right
+    public SpriteRenderer PlayerSprite;
+    [Space]
+    [Header("Variables")]
+    public int Milestone = 2;
 
     private readonly Vector3 CenterOffset = new Vector3(HexUtils.INNER_CONSTANT, 1f, 0);
     private bool zoomedOut;
     private bool enableControls = true;
     private bool levelFinished;
     private bool gameOver;
+    private bool hasBonusPoints = false;
     private int gridX;
     private int gridY;
     private int score;
+    private int level = 1;
 
     private void Start() {
         ResetPlayer();
@@ -54,6 +67,8 @@ public class PlayerController : MonoBehaviour {
         if (levelFinished) {
             //Show menu to continue or exit
             ContinuePlayingMenu.localScale = Vector3.one;
+            if(hasBonusPoints)
+                BonusScoreText.rectTransform.localScale = Vector3.one;
             if (Input.GetKeyDown(KeyCode.N)) {
                 #if UNITY_EDITOR
                 EditorApplication.isPlaying = false;
@@ -66,6 +81,8 @@ public class PlayerController : MonoBehaviour {
                 ResetPlayer();
                 GridController.UpdateMeshes();
                 Timer.NewLevel();
+                hasBonusPoints = false;
+                BonusScoreText.rectTransform.localScale = Vector3.zero;
                 ContinuePlayingMenu.localScale = Vector3.zero;
             }
         }
@@ -138,6 +155,16 @@ public class PlayerController : MonoBehaviour {
         transform.position += HexUtils.DistanceToNeighbours[direction] * GridController.CellRadius;
         gridX += HexUtils.NeighbourDelta[gridY % 2][direction].Item1;
         gridY += HexUtils.NeighbourDelta[gridY % 2][direction].Item2;
+        
+        //Update player sprites
+        if (direction == 2 || direction == 3) // front sprite
+            PlayerSprite.sprite = PlayerSprites[0];
+        if (direction == 0 || direction == 5) // back sprite
+            PlayerSprite.sprite = PlayerSprites[1];
+        if (direction == 4) // left sprite
+            PlayerSprite.sprite = PlayerSprites[2];
+        if (direction == 1) // right sprite
+            PlayerSprite.sprite = PlayerSprites[3];
 
         //Get new neighbours after move
         List<CellIndex> neighbours = GridController.Grid.GetPassableNeighbours(gridX, gridY);
@@ -151,7 +178,17 @@ public class PlayerController : MonoBehaviour {
         //Check if the player has reached the finish
         if (gridX == GridController.Grid.finishCellX && gridY == GridController.Grid.finishCellY) {
             levelFinished = true;
+            level++;
             score++;
+            ValueTuple<int, string> bonusScore = CalculateBonusScore();
+            score += bonusScore.Item1;
+            if (bonusScore.Item1 != 0) {
+                hasBonusPoints = true;
+                if (bonusScore.Item1 == 1)
+                    BonusScoreText.text = "+1 BONUS POINT\n" + bonusScore.Item2;
+                else
+                    BonusScoreText.text = "+"+bonusScore.Item1+" BONUS POINTS\n" + bonusScore.Item2;
+            } 
             UpdateScore();
             ChangeZoom(true);
             Timer.StopTimer();
@@ -213,5 +250,29 @@ public class PlayerController : MonoBehaviour {
         ChangeZoom(true);
         Timer.BackgroundImage.color = Color.black;
         GameOverMenu.localScale = Vector3.one;
+    }
+
+    private ValueTuple<int, string> CalculateBonusScore() {
+        int bonus = 0;
+        string bonusText = "";
+        bool milestone = false;
+        if (level != 0 && level % Milestone == 0) {
+            bonus += level / Milestone;
+            milestone = true;
+        }
+        if (Timer.TimeRemaining > Timer.StartingTimeLeft / 2)
+            bonus++;
+        if (Timer.TimeRemaining > Timer.StartingTimeLeft / 4 * 3)
+            bonus++;
+        if (milestone) {
+            if (bonus == 3) bonusText = "(GREAT TIME & MILESTONE)";
+            if (bonus == 2) bonusText = "(GOOD TIME & MILESTONE)";
+            if (bonus == 1) bonusText = "(MILESTONE)";
+        }
+        else {
+            if (bonus == 2) bonusText = "(GREAT TIME)";
+            if (bonus == 1) bonusText = "(GOOD TIME)";
+        }
+        return ValueTuple.Create(bonus, bonusText);
     }
 }
