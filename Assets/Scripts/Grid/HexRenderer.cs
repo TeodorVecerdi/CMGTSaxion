@@ -8,7 +8,7 @@ public class HexRenderer : MonoBehaviour {
     private List<int> triangles;
     public List<Vector2> uvs;
 
-    private Vector2 UV_TEXTURE_SIZE = new Vector2(1f / 3f, 1f / 1f);
+    private Vector2 UV_TEXTURE_SIZE = new Vector2(1f / 3f, 1f / 3f);
 
     private void Awake() {
         GetComponent<MeshFilter>().mesh = mesh = new Mesh();

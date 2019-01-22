@@ -10,8 +10,10 @@ public class HexCell {
     public bool[] Walls;
     public bool Visible = false;
     public bool isFinish = false;
+    public int variation;
 
     public HexCell(float x, float y, float radius) {
+        variation = Random.Range(0, Constants.VARIATION_COUNT);
         Radius = radius;
         WorldX = (x + y % 2 * 0.5f) * HexUtils.INNER_CONSTANT * radius * 2f;
         WorldY = y * radius * 1.5f;
@@ -26,9 +28,9 @@ public class HexCell {
     }
 
     public static Vector2 GetTexture(HexCell cell) {
-        if (!cell.Visible) return Constants.HIDDEN_CELL_TEXTURE;
-        if (cell.isFinish) return Constants.FINISH_CELL_TEXTURE;
-        return Constants.DEFAULT_CELL_TEXTURE;
+        if (!cell.Visible) return new Vector2(2, cell.variation);
+        if (cell.isFinish) return new Vector2(1, cell.variation);
+        return new Vector2(0, cell.variation);
     }
 }
 
