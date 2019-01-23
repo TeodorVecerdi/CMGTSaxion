@@ -8,7 +8,7 @@ public class HexCell {
     public float ArrayY;
     public float Radius;
     public bool[] Walls;
-    public bool Visible = false;
+    public bool Visible = true;
     public bool isFinish = false;
     public int variation;
 
