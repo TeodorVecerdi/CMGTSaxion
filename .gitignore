@@ -1,18 +1,25 @@
-# Unity Default Folders
+# Unity Folders
 Temp/
 Logs/
 Library/
 obj/
+Builds/
+
+# Unity Packages
+Assets/TextMesh Pro/
+Assets/TextMesh Pro\.meta
 
 # JetBrains Folders
 \.idea/
 Assets/Plugins/
 Assets/Plugins\.meta
 
-# Unity Packages
-Assets/TextMesh Pro/
-Assets/TextMesh Pro\.meta
-
 # Project Files
 CMGTSaxion\.sln
 *.csproj
+
+# CLOC
+Assets/Scripts/cloc\.exe
+Assets/Scripts/cloc\.exe\.meta
+Assets/Scripts/codeAnalizer\.bat
+Assets/Scripts/codeAnalizer\.bat\.meta
